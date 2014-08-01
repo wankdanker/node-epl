@@ -33,11 +33,19 @@ api
 
 ### Constructor Options
 
+* `dpi` - the dots per inch for printing on the label
+* `labelWidth` - the width of the label in inches
+* `labelHeight` - the height of the label in inches
+* `lineSpacing` - how much space between lines in dots per inch
 * `device` - the output device or file to write lables to when calling the `print` method
 
 ```js
 var epl = require('epl')({
-    device : '/path/to/device'
+      dpi : 203
+    , labelWidth : 4
+    , labelHeight : 6.75
+    , lineSpacing : 50
+    , device : '/path/to/device'
 });
 ```
 
