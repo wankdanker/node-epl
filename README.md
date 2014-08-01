@@ -49,7 +49,13 @@ var epl = require('epl')({
 ### epl.drawLine (length, height, xor)
 ### epl.drawBox (length, height, stroke)
 ### epl.start ()
+
+Start a new label. This must be called before adding anything to your label.
+
 ### epl.end ()
+
+End a label. This must be called when you are finished adding elements to your label.
+
 ### epl.position (x, y)
 ### epl.move (x, y)
 ### epl.print (callback)
