@@ -31,7 +31,7 @@ epl.start()
 api
 ---
 
-!!! Constructor Options
+### Constructor Options
 
 * `device` - the output device or file to write lables to when calling the `print` method
 
@@ -41,20 +41,20 @@ var epl = require('epl')({
 });
 ```
 
-!!! epl.setFont (fontNumber)
-!!! epl.addText (text, size, advance)
-!!! addTextCentered (text, size)
-!!! epl.drawBarcode (text, height, size, humanreadable)
-!!! epl.drawUPC (text, height, size, humanreadable)
-!!! epl.drawLine (length, height, xor)
-!!! epl.drawBox (length, height, stroke)
-!!! epl.start ()
-!!! epl.end ()
-!!! epl.position (x, y)
-!!! epl.move (x, y)
-!!! epl.print (callback)
-!!! epl.bookmark (name, xy)
-!!! epl.recall (name)
+### epl.setFont (fontNumber)
+### epl.addText (text, size, advance)
+### addTextCentered (text, size)
+### epl.drawBarcode (text, height, size, humanreadable)
+### epl.drawUPC (text, height, size, humanreadable)
+### epl.drawLine (length, height, xor)
+### epl.drawBox (length, height, stroke)
+### epl.start ()
+### epl.end ()
+### epl.position (x, y)
+### epl.move (x, y)
+### epl.print (callback)
+### epl.bookmark (name, xy)
+### epl.recall (name)
 
 license
 -------
