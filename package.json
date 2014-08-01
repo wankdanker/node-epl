@@ -1,0 +1,27 @@
+{
+  "name": "epl",
+  "version": "0.0.0",
+  "description": "An EPL printer library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wankdanker/node-epl.git"
+  },
+  "keywords": [
+    "printer",
+    "epl",
+    "zebra"
+  ],
+  "author": "Dan VerWeire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wankdanker/node-epl/issues"
+  },
+  "homepage": "https://github.com/wankdanker/node-epl",
+  "dependencies": {
+    "write-file-queue": "0.0.1"
+  }
+}
