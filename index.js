@@ -111,6 +111,20 @@ function EPL (options) {
 		
 		return self;
 	};
+	
+	self.drawEAN13 = function (text, height, size, humanreadable) {
+		height = (height || height === 0) ? height : 100;
+		size = (size || size === 2) ? size : 2;
+		
+		if (size < 2 || size > 4) {
+			throw new Error("barcode size must be between 2 and 4 inclusive");
+		}
+
+		self.commands.b(self.xOffset, self.yOffset, 0, 'E30', size, size, height, humanreadable, text);
+		self.yOffset += height + self.options.lineSpacing + 20;
+		
+		return self;
+	};
 
 	self.drawLine = function (length, height, xor) {
 		self.commands[(xor) ? "le" : "lo"](self.xOffset, self.yOffset, length, height);
