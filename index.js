@@ -97,6 +97,16 @@ function EPL (options) {
 		
 		return self;
 	};
+	
+	self.drawUCC128Barcode = function (text, height, size, humanreadable) {
+		height = (height || height === 0) ? height : 100;
+		size = (size || size === 0) ? size : 1;
+		
+		self.commands.b(self.xOffset, self.yOffset, 0, 0, size, size, height, humanreadable, text);
+		self.yOffset += height + self.options.lineSpacing + 20;
+		
+		return self;
+	};
 
 	self.drawUPC = function (text, height, size, humanreadable) {
 		height = (height || height === 0) ? height : 100;
