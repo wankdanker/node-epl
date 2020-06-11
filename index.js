@@ -215,8 +215,7 @@ function EPL (options) {
 	self.commands = {
 		a : function (x, y, rotation, font, hMultiplier, vMultiplier, reverseImage, data) {
 			data = (data || "").toUpperCase();
-			data = data.replace("\\","\\\\");
-			data = data.replace("\"","\\\"");
+			data = cleanString(data);
 
 			if (reverseImage) {
 				reverseImage = "R";
@@ -229,6 +228,7 @@ function EPL (options) {
 		}
 		, b : function (x, y, rotation, barcodeType, narrowBarWidth, wideBarWidth, height, humanReadable, data) {
 			data = (data || "").toUpperCase();
+			data = cleanString(data);
 			
 			if (humanReadable) {
 				humanReadable = "B";
@@ -258,4 +258,10 @@ function EPL (options) {
 			self.output += "Z" + direction;
 		}
 	};
+}
+
+function cleanString(str) {
+	return str.replace(/\\/gi,"\\\\")
+		.replace(/"/gi,"\\\"")
+		.replace(/[\r\n]+/gi," ");
 }

@@ -4,7 +4,7 @@
   "description": "An EPL printer library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/wankdanker/node-epl",
   "dependencies": {
     "write-file-queue": "0.0.1"
+  },
+  "devDependencies": {
+    "tape": "^5.0.1"
   }
 }
