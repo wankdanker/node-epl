@@ -255,7 +255,7 @@ function EPL (options) {
 			self.output += "P1\n";
 		}
 		, z : function (direction) {
-			self.output += "Z" + direction;
+			self.output += "Z" + direction + "\n";
 		}
 	};
 }
